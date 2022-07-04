@@ -1,0 +1,36 @@
+
+.status-bar{
+    /* flex를 사용하면 가로방향으로 박스가 놓인다 */
+    display : flex;
+    /* background-color: tomato; */
+    justify-content: center;
+    padding: 5px 3px;
+
+    /* flex축을 따라 퍼뜨리기 */
+    justify-content: center;
+
+}
+
+.status-bar__column{
+    width: 33%;
+}
+
+
+.status-bar__column:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+.status-bar__column:last-child{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.status-bar__column .fa-battery-full{
+    margin: 0px 10px;
+    
+}
+
+.status-bar__column:first-child span{
+    margin-right: 5px;
+}
