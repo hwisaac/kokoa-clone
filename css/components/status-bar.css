@@ -9,6 +9,10 @@
     /* flex축을 따라 퍼뜨리기 */
     justify-content: center;
 
+    position: fixed;
+    width: 100%;
+    top:0px;
+
 }
 
 .status-bar__column{

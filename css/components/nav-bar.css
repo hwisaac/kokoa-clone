@@ -1,0 +1,61 @@
+.nav{
+    background-color:  #f9f9fa;
+    padding: 20px 40px;
+    border-top: 1px solid rgba(121,121,121,0.3);
+    position: fixed;
+    bottom: 0px;
+    /* 포지션을 fixed 하면 자동 조절된 width 가 없어지므로 100%로 설정해준다 */
+    width: 100%; 
+
+    /* 위에까지 적용하면 박스의 width 값100%과 좌우 padding+@ 에 의해 
+    패딩자리만큼 화면 밖으로 오른쪽으로 박스가 밀려나면서, 가장 오른쪽 아이콘이 화면을 벗어나게 된다.
+    박스의 패딩을 줘도 밀려나지 않도록 패딩+박스width=100% 값이 자동으로 조절되도록 하는 스타일은 다음이다. 
+    이제 패딩이 박스 면적도 침식할수 있다.*/
+    box-sizing: border-box;
+    
+
+}
+.nav__list {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.nav__link{
+    color: #2e363e;
+    outline: none;
+
+    /* nav__notification에 absolute 포지션 적용하려면 바로 윗 부모에 relative 설정해줘야함 
+    여기 따로 top, left 등의 위치를 지정하지 않는 한 변화는 없다.*/
+    position: relative;
+    
+
+}
+
+.nav__notification {
+    color: white;
+    display: flex; /*box로 하면 안됨*/
+    width : 30px;
+    height: 30px;
+    background-color: tomato;
+    border-radius: 50%;
+    /* 정중앙에 가도록 하기 justify-content은 가로에서 정중앙
+    align-items는 세로에서 정중앙*/
+    align-items: center;
+    justify-content: center;
+    
+    /* nav__notification에 absolute 포지션 적용하려면 바로 윗 부모에 relative 설정해줘야함 */
+    position: absolute; 
+    left: 15px;
+    top: -15px;
+}
+
+.nav__pt-notification{
+    display: block;
+    background-color: tomato;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 28px;
+    top: -5px;
+}
