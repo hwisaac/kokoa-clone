@@ -53,7 +53,19 @@
 }
 
 
-
-.user-component__column{
+/* 컬럼중에 마지막 녀석만 선택해준다 */
+.user-component__column: :last-child{
     color: rgba(0,0,0, 0.5);
+
+    /* 숫자와 뱃지를 정렬해주는 스타일 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-component__time{
+    display: flex;
+    margin-bottom: 10px;
+    
+
 }

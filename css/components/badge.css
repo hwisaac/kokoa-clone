@@ -1,0 +1,14 @@
+.badge {
+    color: white;
+    display: flex; /*box로 하면 안됨*/
+    width : 30px;
+    height: 30px;
+    background-color: tomato;
+    border-radius: 50%;
+    /* 정중앙에 가도록 하기 justify-content은 가로에서 정중앙
+    align-items는 세로에서 정중앙*/
+    align-items: center;
+    justify-content: center;
+    
+    
+}

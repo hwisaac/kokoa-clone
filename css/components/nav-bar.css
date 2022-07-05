@@ -32,17 +32,6 @@
 }
 
 .nav__notification {
-    color: white;
-    display: flex; /*box로 하면 안됨*/
-    width : 30px;
-    height: 30px;
-    background-color: tomato;
-    border-radius: 50%;
-    /* 정중앙에 가도록 하기 justify-content은 가로에서 정중앙
-    align-items는 세로에서 정중앙*/
-    align-items: center;
-    justify-content: center;
-    
     /* nav__notification에 absolute 포지션 적용하려면 바로 윗 부모에 relative 설정해줘야함 */
     position: absolute; 
     left: 15px;
