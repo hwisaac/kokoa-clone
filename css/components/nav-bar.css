@@ -48,3 +48,12 @@
     left: 28px;
     top: -5px;
 }
+.screen-header__pt-notification{
+    display: block;
+    background-color: blue;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
