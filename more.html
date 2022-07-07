@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More  - Kokoa Clone </title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <!--To do: Wifi Icon -->
+            <i class="fa-solid fa-wifi"></i>
+
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <!-- Battery Icon -->
+            <i class="fa-solid fa-battery-full fa-lg"></i>
+            <!-- Lightening Icon -->
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+    
+    <header class="screen-header">
+        <h1 class="screen-header__title">More</h1>
+        <div class="screen-header__icons">
+            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span><a href="settings.html"><i class="fa-solid fa-gear fa-lg"></i></a></span>
+            <span class="screen-header__pt-notification"></span>
+        </div>
+
+    </header>
+
+    <main class="main-screen more-screen">
+    
+        <div class="user-component">
+            <div class="user-component__column">
+                <!-- img 의 클래스가 두개로 이뤄진 것에 주목! 사이즈가 다른것을 만들기 위함-->
+                <img class="user-component__avatar user-component__avatar--xl" src="screenshots/goldmask.jpg" />
+                <div class="user-component__text">
+                    <h4 class="user-component__title">GoldMask</h4>
+                    <div class="user-component__below">
+                        <h6 class="user-component__subtitle">+ 787 666 999</h6>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="user-component__column">
+                <i class="fa-solid fa-message fa-2x"></i>
+            </div>
+    
+        </div>
+        <div class="icon-row">
+            
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Calendar</span></div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-face-grin-wink"></i>
+                <span>Emoticons</span></div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-brush"></i>
+                <span>Themes</span></div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Account</span></div>            
+        </div>
+        <div class="icon-row">
+            
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Account</span></div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-comments"></i>
+                <span>OpenChat</span></div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-brush"></i>
+                <span>Themes</span></div>
+            <div class="icon-row__icon">
+                <i class="far fa-envelope"></i>
+                <span>Account</span></div>            
+        </div>
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">Suggestions</h4>
+            <div class = "more-suggestion__icons">
+                <div class = "more-suggestion__icon">
+                    <div class="more-suggestion__icon-image">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <span class="more-suggestion__icon-text">KdoKoa Story</span>
+                </div>
+            </div>
+            
+        </div>
+
+    
+    </main>
+
+    <!-- 네비게이션 바:구글이 가져와서 ul,li링크를 가져간다 
+        nav>ul>li*4>a 엔터하면 vscode가 한번에 만들어줌 -->
+     <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friends.html">
+                    <i class="fa-regular fa-user fa-2xl"></i></a></li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chat.html">
+                    <i class="fa-regular fa-comment fa-2xl"></i></a></li>
+            <li class="nav__btn"><a class="nav__link" href="find.html">
+                    <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                    </i></a></li>
+            <li class="nav__btn"><a class="nav__link" href="more.html">
+                    <span class="nav__pt-notification"></span>
+                    <i class="fas fa-check-circle fa-2xl"></i></a></li>
+        </ul>
+     </nav>
+    
+
+
+
+
+    
+
+    <!--아이콘추가 스크립트. 스크립트는 마지막에 /body 닫기전에 있어야 한다 -->
+    <script src="https://kit.fontawesome.com/042e7c67c3.js" crossorigin="anonymous"></script>
+</body>
+</html>

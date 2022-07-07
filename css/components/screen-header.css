@@ -19,3 +19,7 @@
     margin-left: 25px;
     position: relative;
 }
+
+.screen-header__icons span i {
+    color: #2e363e;
+}
