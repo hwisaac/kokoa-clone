@@ -1,0 +1,20 @@
+/* 맨 위로 올리고 z-index도 매우 높게 */
+#no-mobile{
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--yellow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    font-size: 32px;
+}
+/* 미디어 쿼리로 특정 너비에서만 작동하게 한다 */
+@media screen and (max-width:645px){
+    #no-mobile {
+        display: none;
+    }
+}
