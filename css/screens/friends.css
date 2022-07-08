@@ -36,3 +36,31 @@
 .friends-screen {
     padding: 0px var(--horizontal-space);
 }
+@keyframes hideSplashScreen{
+    from{
+
+    }
+    to{
+        opacity: 0;
+        /* display:none;으로는 완전히 제거 못함. visibility 는 클릭은 할순 있음
+        완전히 element를 제거하렴녀 JS 를 사용해야만 한다. */
+        visibility: hidden; 
+
+    }
+}
+
+#splash-screen {
+    background-color: var(--yellow);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    /* 아이콘 정가운데로 3총사 display justify-content, align-itmes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 132px;
+    /* 여기서 forwards는 마지막 keyframe 을 유지하는 옵션이다. 필수!*/
+    animation:hideSplashScreen 0.3s ease-in-out forwards;
+    animation-delay: 2s;
+}
