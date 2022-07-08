@@ -1,6 +1,6 @@
 #chat-screen {
     background-color: #abc1d1;
-    height: 11000vh;
+    height: 500vh;
 }
 
 #chat-screen .alt-header,
@@ -20,12 +20,25 @@
     z-index: 1; /* 이제 status-bar와 alt-header 는 main 을 덮게 된다 */
 }
 
+/* 애니메이션 넣기 */
+@keyframes fadeIn{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+    
+}
 
 .main-chat {
-    margin-top: 120px;
+    margin-top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp{
@@ -108,6 +121,8 @@
     /* 보더박스 안하면 아이콘 안보임 */
     box-sizing: border-box;
     align-items: center;
+    /* 애니메이션 */
+    transition: transform .3s ease-in-out;
 }
 .reply .reply__column:first-child{
     width: 10%;
@@ -126,6 +141,9 @@
     width: 100%;
     border: var(--main-border);
     border-radius: 20px;
+    box-sizing: border-box;
+
+    transition: all 0.3s ease-in-out;
 }
 .reply__column:last-child > i,
 .reply__column:last-child button {
@@ -156,4 +174,27 @@
 .reply__column button: active{
     outline: none;
 
+}
+
+/* [reply 내부 어떤 element가 focus 되었을 경우] 선택하려면 focus-whitin 을 이용한다 */
+.reply: .reply__column:first-child,
+.reply: .fa-face-grin-beam,
+.reply: button{
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-grin-beam,
+.reply:focus-within button{
+    opacity: 0;
+}
+
+.reply input:focus{
+    width: 95vw;
+    /* 아래에서 reply 트랜스폼으로 80px 내릴거니까 여기선 80px올려줘야 안따라 내려감 */
+    transform: translateX(-13.5%) translateY(-80px);
+}
+
+.reply:focus-within{
+    transform: translateY(80px);
 }

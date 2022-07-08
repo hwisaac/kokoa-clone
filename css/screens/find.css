@@ -114,3 +114,26 @@
 .open-post__heart-count span{
     margin-left: 3px;
 }
+
+/* find에서 사진 옆 작은 하트가 뛰는 애니메이션 적용 */
+@keyframes heartBeat{
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+
+.open-post__heart-count:hover i{
+    animation: heartBeat 1s linear infinite;
+    /* will-change 는 브라우저에 뭔가 바뀔거라 말하기 때문에 
+    브라우저가 랜더링을 더 잘하게 만듬. shaking 이 없어지고 부드러워진다. */
+    will-change;
+}

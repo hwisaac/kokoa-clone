@@ -23,3 +23,16 @@
 .screen-header__icons span i {
     color: #2e363e;
 }
+
+/* cog 아이콘 돌리는 애니메이션 */
+@keyframes rotateCog{
+    from{
+        transform: none;
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.screen-header__icons .fa-gear:hover{
+    animation: rotateCog 3s linear infinite;
+}
